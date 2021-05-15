@@ -76,4 +76,4 @@ python run_with_submitit.py --model convit_base --data-path /path/to/imagenet
 ```
 
 # License
-The majority of this repository is released under the CC-BY-NC 4.0. license as found in the [LICENSE](LICENSE) file, however portions of the project are available under separate license terms: deit and timm are licensed under Apache 2.0.
+The majority of this repository is released under the Apache 2.0 license as found in the [LICENSE](LICENSE) file.
