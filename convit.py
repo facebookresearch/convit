@@ -302,7 +302,6 @@ class VisionTransformer(nn.Module):
                  drop_path_rate=0., hybrid_backbone=None, norm_layer=nn.LayerNorm, global_pool=None,
                  local_up_to_layer=10, locality_strength=1., use_pos_embed=True):
         super().__init__()
-        embed_dim *= num_heads
         self.num_classes = num_classes
         self.local_up_to_layer = local_up_to_layer
         self.num_features = self.embed_dim = embed_dim  # num_features for consistency with other models
