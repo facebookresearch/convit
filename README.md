@@ -1,3 +1,23 @@
+
+# Modification Type/Purpose
+
+Pulled from binary [classification fork](https://github.com/mawady/convit.git)
+Type: -adding the pre_save stage for setting zero state of the model state dictionary.
+Purpose: - for meta-heuristic learning of hyper-params or grid search.
+> model can be reloaded at each stage from zero state for next hyper parameter iteration in hyperparameter search when re-running training with new parameters thus returning to initial state rather than last trained state when running as a subprocess(s’).
+> grid search code to follow this fork
+
+
+# New Commands
+
+- Save model checkpoint at 0th state of grid search 
+- Train:  main.py --pre_save --pre_save_path path/to/zero_state_directory/checkpiont.path --pretrained --batch-size 30 --output_dir /path/to/models --model convit_tiny --epochs 5 --data-path /path/to/dataset --nb_classes 2 --nb_classes_pre 1000
+ 
+
+below from 
+- Train: python main.py --pretrained --batch-size 30 --output_dir /path/to/models --model convit_tiny --epochs 5 --data-path /path/to/dataset --nb_classes 2 --nb_classes_pre 1000
+- Eval: python main.py --eval --model convit_tiny --resume /path/to/models/checkpoint.pth --data-path /path/to/dataset --nb_classes 2 --nb_classes_pre 1000
+
 # ConViT : Vision Transformers with Convolutional Inductive Biases
 
 This repository contains PyTorch code for ConViT. It builds on code from the [Data-Efficient Vision Transformer](https://github.com/facebookresearch/deit) and from [timm](https://github.com/rwightman/pytorch-image-models).
