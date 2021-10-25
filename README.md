@@ -14,7 +14,7 @@ Purpose: - for meta-heuristic learning of hyper-params or grid search.
 - Train:  
 
 ```
-main.py --pre_save --pre_save_path path/to/zero_state_directory/checkpiont.path --pretrained --batch-size 30 --output_dir /path/to/models --model convit_tiny --epochs 5 --data-path /path/to/dataset --nb_classes 2 --nb_classes_pre 1000
+python main.py --pre_save --pre_save_path path/to/zero_state_directory/checkpiont.path --pretrained --batch-size 30 --output_dir /path/to/models --model convit_tiny --epochs 5 --data-path /path/to/dataset --nb_classes 2 --nb_classes_pre 1000
 ```
  
 
@@ -27,7 +27,8 @@ python main.py --pretrained --batch-size 30 --output_dir /path/to/models --model
 
 - Eval: 
 
-``` python main.py --eval --model convit_tiny --resume /path/to/models/checkpoint.pth --data-path /path/to/dataset --nb_classes 2 --nb_classes_pre 1000
+``` 
+python main.py --eval --model convit_tiny --resume /path/to/models/checkpoint.pth --data-path /path/to/dataset --nb_classes 2 --nb_classes_pre 1000
 ```
 
 # ConViT : Vision Transformers with Convolutional Inductive Biases
